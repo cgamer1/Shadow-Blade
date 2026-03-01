@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Blade</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <canvas id="G"></canvas>
+    <div id="ui">
+      <div class="panel" id="title">
+        <h1>SHADOW BLADE</h1>
+        <p>
+          ← → Move | ↑ Jump (double in air) | ↓ Crouch / Fast-fall<br />
+          SPACE Attack | SHIFT Block / Parry<br />
+          Hold ↑ = higher jump | Wall slide + ↑ = wall jump<br />
+          Orbs pull you in! Eliminate all enemies to unlock the door.<br />
+          Attack door to open → walk through to advance.
+        </p>
+        <button class="btn" id="startBtn">BEGIN</button>
+      </div>
+      <div class="panel" id="dead">
+        <p style="font-size: 20px; color: #c33">DEFEATED</p>
+        <button class="btn" id="retryBtn">RETRY</button>
+      </div>
+      <div class="panel" id="win">
+        <p style="font-size: 20px; color: #36c">YOU WIN</p>
+        <p id="winTime">Time: 00:00.00</p>
+        <p id="newRecordMsg">NEW RECORD!</p>
+        <p id="bestTimeWin">Best: --:--.--</p>
+        <p id="levelBestWin">Level Best: --:--.--</p>
+        <div id="runSummary" class="summaryGrid"></div>
+        <button class="btn" id="replayBtn">PLAY AGAIN</button>
+      </div>
+    </div>
+    <div id="hud">
+      <div id="hudLeft">
+        <div class="hudText"><span id="hhp">HP: 5</span><span id="hen"></span></div>
+        <div class="meter meter-red"><div id="hpFill" class="meterFill"></div></div>
+        <div class="fuelRow">
+          <div class="meter meter-blue"><div id="spdFill" class="meterFill"></div></div>
+          <div id="fuelToggleState">ON</div>
+        </div>
+      </div>
+      <div id="hudRight">
+        <div id="timeCounter">Time: 00:00.00</div>
+        <div id="bestTimeCounter">Best: --:--.--</div>
+        <div id="levelBestCounter">Level Best: --:--.--</div>
+        <div id="levelCounter">Level: 1/22</div>
+      </div>
+    </div>
+  </body>
+</html>
