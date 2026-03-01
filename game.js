@@ -1,8 +1,6 @@
 const cv = document.getElementById("G");
 const c = cv.getContext("2d");
 
-// resize function  
-
 function resize() {
   cv.width = Math.min(innerWidth - 4, 1100);
   cv.height = Math.min(innerHeight - 4, 660);
