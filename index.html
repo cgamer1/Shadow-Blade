@@ -14,10 +14,13 @@
         <h1>SHADOW BLADE</h1>
         <p>
           ← → Move | ↑ Jump (double in air) | ↓ Crouch / Fast-fall<br />
-          SPACE Attack | SHIFT Block / Parry<br />
+          SPACE Attack | SHIFT Block / Parry | Hold X = phase state<br />
           Hold ↑ = higher jump | Wall slide + ↑ = wall jump<br />
-          Orbs pull you in! Eliminate all enemies to unlock the door.<br />
-          Attack door to open → walk through to advance.
+          Z + ↓ = crouch lock | Z + SPACE = grab / dive slash | Z + SHIFT = quick phase prep<br />
+          Hold C + press T to jump to a level<br />
+          Orbs pull you in. Crumbling platforms will drop. Spikes are lethal.<br />
+          Doors are open in normal stages, so keep moving.<br />
+          Earlier enemy kills weaken the final boss by up to half HP.
         </p>
         <button class="btn" id="startBtn">BEGIN</button>
       </div>
@@ -50,6 +53,28 @@
         <div id="levelBestCounter">Level Best: --:--.--</div>
         <div id="levelCounter">Level: 1/22</div>
       </div>
+    </div>
+    <div id="levelJumpOverlay">
+      <form id="levelJumpForm" class="levelJumpPanel">
+        <label for="levelJumpPassword">Jump to level</label>
+        <input
+          id="levelJumpPassword"
+          type="password"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Password"
+        />
+        <input
+          id="levelJumpInput"
+          type="text"
+          inputmode="numeric"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="1-22"
+        />
+        <button class="btn" id="levelJumpSubmit" type="submit">GO</button>
+        <p id="levelJumpStatus" aria-live="polite"></p>
+      </form>
     </div>
   </body>
 </html>
