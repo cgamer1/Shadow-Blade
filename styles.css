@@ -17,7 +17,7 @@
   --danger: #ff6d73;
   --gold: #f5cd65;
 }
-
+/* Body */
 body {
   background:
     radial-gradient(circle at top, rgba(39, 89, 176, 0.2), transparent 35%),
